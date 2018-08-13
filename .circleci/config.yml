@@ -1,6 +1,6 @@
 version: 2
 jobs:
-	dummy:
-		branches:
-			ignore:
-				- gh-pages
+  build:
+\    branches:
+      ignore:
+        - gh-pages
