@@ -11,6 +11,8 @@ describe('TeamPage', () => {
     it('should render my team page', () => {
       const page = new TeamPage();
       expect(page.render()).toContain("<h1>Made by:</h1>");
+      expect(page.render()).toContain("EJ");
+      expect(page.render()).toContain("Hugh");
     });
   });
 
