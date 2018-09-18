@@ -9,6 +9,8 @@
 .idea_modules/
 .tags*
 *.swp
+.vs/
+client/.vs/
 
 # Node
 node_modules/
@@ -22,3 +24,4 @@ dist/
 public/
 build/
 coverage/
+
