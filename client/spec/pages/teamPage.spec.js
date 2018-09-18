@@ -19,6 +19,8 @@ describe('TeamPage', () => {
       expect(page.render()).toContain("Hugh");
       expect(page.render()).toContain("Anna");
       expect(page.render()).toContain("HongYi");
+      expect(page.render()).toContain("Lillian");
+      expect(page.render()).toContain("Ken");
     });
 
   });
