@@ -23,8 +23,8 @@ class HomePage extends BasePage {
 
   getDateTime() {
     const dateTime = new Date(Date.now()).toLocaleString().split(",");
-    return { 
-      date: dateTime[0], 
+    return {
+      date: dateTime[0],
       time: dateTime[1],
     };
   }
@@ -46,6 +46,10 @@ class HomePage extends BasePage {
 
   leftButtonEvent() {
     AudioHub.playSound(plop);
+  }
+
+  faceButtonEvent() {
+    this.navigate('demo');
   }
 
   topButtonEvent() {

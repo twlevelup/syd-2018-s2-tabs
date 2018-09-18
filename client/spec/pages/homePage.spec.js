@@ -34,6 +34,20 @@ describe('HomePage', () => {
     });
   });
 
+  describe('#faceButtonEvent', () => {
+  it('should take the user to the demo page', () => {
+    const props = {
+      navigate: () => { },
+    };
+
+    const page = new HomePage(props);
+    spyOn(page, 'navigate');
+
+    page.faceButtonEvent();
+    expect(page.navigate).toHaveBeenCalledWith('demo');
+  });
+});
+
   describe('#rightButtonEvent', () => {
     it('goes to contacts page', () => {
       const props = {
@@ -71,7 +85,7 @@ describe('HomePage', () => {
 
   describe('#updateTimeDisplay', () => {
     it('updateTimeDisplays calls clock-time if its in the window', () => {
-      const page = new HomePage();      
+      const page = new HomePage();
 
       watchFace.innerHTML = page.render();
 
