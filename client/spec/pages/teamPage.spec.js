@@ -11,9 +11,16 @@ describe('TeamPage', () => {
     it('should render my team page', () => {
       const page = new TeamPage();
       expect(page.render()).toContain("<h1>Made by:</h1>");
+    });
+
+    it('should contain team members names', () => {
+      const page = new TeamPage();
       expect(page.render()).toContain("EJ");
       expect(page.render()).toContain("Hugh");
+      expect(page.render()).toContain("Anna");
+      expect(page.render()).toContain("HongYi");
     });
+
   });
 
 });
