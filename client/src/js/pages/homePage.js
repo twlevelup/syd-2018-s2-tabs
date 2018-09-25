@@ -49,7 +49,7 @@ class HomePage extends BasePage {
   }
 
   faceButtonEvent() {
-    this.navigate('demo');
+    this.navigate('sad');
   }
 
   topButtonEvent() {
