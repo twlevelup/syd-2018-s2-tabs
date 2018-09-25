@@ -1,5 +1,4 @@
 const AlertNotification = require('./notifications/AlertNotification');
-const DemoNotification = require('./notifications/DemoNotification');
 
 const notifications = [
   {
@@ -12,13 +11,7 @@ const notifications = [
     type: "base",
     label: "Base",
     defaultValue: "This is a test base notification",
-  },
-  {
-    type: "demo",
-    label: "Demo",
-    defaultValue: "Our First Notification!",
-    view: DemoNotification,
-  },
+  }
 ];
 
 module.exports = notifications;
