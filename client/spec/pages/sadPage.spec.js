@@ -13,4 +13,17 @@ describe('The Sad Face Page', () => {
       expect(page.render()).toContain('Sad face');
     });
   });
+
+  describe('#bottomButtonEvent', () => {
+    it('goes to root page', () => {
+      const props = {
+        navigate: () => { },
+      };
+      const page = new SadPage(props);
+      spyOn(page, 'navigate');
+
+      page.bottomButtonEvent();
+      expect(page.navigate).toHaveBeenCalledWith('/');
+    });
+  });
 });
