@@ -34,11 +34,26 @@ describe('HomePage', () => {
     });
   });
 
+  describe('#holdButtonEvent', () => {
+  it('should take the user to the emergency alert page', () => {
+    const props = {
+      navigate: () => { },
+    };
+
+    const page = new HomePage(props);
+    spyOn(page, 'navigate');
+
+    page.holdButtonEvent();
+    expect(page.navigate).toHaveBeenCalledWith('emergencyAlert');
+  });
+  });
+
   describe('#faceButtonEvent', () => {
   it('should take the user to the demo page', () => {
     const props = {
       navigate: () => { },
     };
+
 
     const page = new HomePage(props);
     spyOn(page, 'navigate');

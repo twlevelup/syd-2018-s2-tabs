@@ -48,8 +48,14 @@ class HomePage extends BasePage {
     AudioHub.playSound(plop);
   }
 
+
+
   faceButtonEvent() {
     this.navigate('sad');
+  }
+
+  holdButtonEvent() {
+    this.navigate('emergencyAlert')
   }
 
   topButtonEvent() {
