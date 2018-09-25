@@ -26,4 +26,5 @@ describe('The Sad Face Page', () => {
       expect(page.navigate).toHaveBeenCalledWith('/');
     });
   });
+
 });
