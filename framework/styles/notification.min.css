@@ -1,0 +1,1 @@
+#notification-container{background-color:black;color:white;position:absolute;height:160px;width:160px;top:50px;left:50px;opacity:0.9;z-index:100;padding:20px}#notification-message-display{height:80%}#notification-buttons{display:flex}.notification-button{flex:1;cursor:default;text-align:center}#notification-button-right{text-align:right}#notification-button-left{text-align:left}
