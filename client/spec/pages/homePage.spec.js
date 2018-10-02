@@ -64,7 +64,7 @@ describe('HomePage', () => {
 });
 
   describe('#rightButtonEvent', () => {
-    it('goes to contacts page', () => {
+    it('goes to map page', () => {
       const props = {
         navigate: () => { },
       };
@@ -72,7 +72,7 @@ describe('HomePage', () => {
       spyOn(page, 'navigate');
 
       page.rightButtonEvent();
-      expect(page.navigate).toHaveBeenCalledWith('contacts');
+      expect(page.navigate).toHaveBeenCalledWith('maps');
     });
   });
 
@@ -97,6 +97,8 @@ describe('HomePage', () => {
       expect(watchFace.scrollTop).toEqual(-40);
     });
   });
+
+
 
   describe('#updateTimeDisplay', () => {
     it('updateTimeDisplays calls clock-time if its in the window', () => {
