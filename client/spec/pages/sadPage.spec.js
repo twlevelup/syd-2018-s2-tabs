@@ -10,7 +10,7 @@ describe('The Sad Face Page', () => {
   describe('#render', () => {
     it('should contain the correct text', () => {
       const page = new SadPage();
-      expect(page.render()).toContain('Sad face');
+      expect(page.render()).toContain('Dismiss');
     });
   });
 
