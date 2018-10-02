@@ -31,19 +31,19 @@ fi
 
 # stage any changes and new files, include circleci config to avoid auto-build.
 cp -a ../public/* .
-mkdir -p  .circleci
-cat > .circleci/config.yml <<EOF
-version: 2
-jobs:
-  build:
-    docker:
-        - image: circleci/node:10.7.0
-    steps:
-      - run: "false"
-    branches:
-      ignore:
-        - gh-pages
-EOF
+# mkdir -p  .circleci
+# cat > .circleci/config.yml <<EOF
+# version: 2
+# jobs:
+#   build:
+#     docker:
+#         - image: circleci/node:10.7.0
+#     steps:
+#       - run: "false"
+#     branches:
+#       ignore:
+#         - gh-pages
+# EOF
 
 git add -A
 
