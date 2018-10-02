@@ -1,6 +1,6 @@
 const BasePage = require('watch-framework').BasePage;
 const happyface = require('../../images/happyface.png');
-const sadface = require('../../images/cross.png');
+const cross = require('../../images/cross.png');
 
 class HappyPage extends BasePage {
 
