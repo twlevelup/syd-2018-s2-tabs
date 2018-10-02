@@ -7,6 +7,7 @@ const NeutralPage = require('./pages/neutralPage');
 const DemoPage = require('./pages/demoPage');
 const EmergencyAlertPage = require('./pages/emergencyAlertPage');
 const MapsPage = require('./pages/mapsPage');
+const DirectionPage = require('./pages/directionPage');
 
 module.exports = {
   '/': HomePage,
@@ -17,5 +18,6 @@ module.exports = {
   'neutral': NeutralPage,
   'demo': DemoPage,
   'emergencyAlert': EmergencyAlertPage,
-  'maps' : MapsPage
+  'maps' : MapsPage,
+  'direction': DirectionPage
 };

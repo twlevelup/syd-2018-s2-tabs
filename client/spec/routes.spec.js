@@ -9,5 +9,6 @@ describe('routes', () => {
     expect(routes['sad']).toBeDefined();
     expect(routes['demo']).toBeDefined();
     expect(routes['maps']).toBeDefined();
+    expect(routes['direction']).toBeDefined();
   });
 });
