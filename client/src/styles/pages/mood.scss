@@ -1,11 +1,11 @@
-#cancel {
+#textbutton {
     display: inline-block;
     background: #3f484a;
     width: 100px;
     text-align: center;
     border: 1px solid white;
     position: absolute;
-    bottom: 0px;
+    top: 0px;
     left: 50%;
     margin-left: -50px;
 }
@@ -13,18 +13,96 @@
 #face {
     box-sizing: border-box;
     width: 220px;
-    padding: 0 20px 0 20px;
+    padding: 0 40px 0 40px;
     text-align: center;
 }
 
-#cross {
+#moodline {
+    box-sizing: border-box;
+    width: 220px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+#cross, #lefticon, #righticon, #topicon {
     display: block;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     position: absolute;
+    z-index: 10;
+}
+
+#cross {
     bottom: 0px;
-    left: 50%;
-    margin-left: -25px;
+    left: 105px;
+}
+
+#lefticon {
+    top: 90px;
+    left: 0px;
+}
+
+#righticon {
+    top: 90px;
+    right: 0px;
+}
+
+#topicon {
+    top: 0px;
+    left: 105px;
+}
+
+#lefticon-container, #righticon-container, #topicon-container, #cross-container {
+    display: block;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border: solid white 2px;
+    background: #3f484a;
+    position: absolute;
+    z-index: 10;
+}
+
+#lefticon-container {
+    padding-left: 0;
+    border-left:0;
+    border-radius:0 30px 30px 0;
+    top: 80px;
+    left: 0px;
+}
+
+#righticon-container {
+    padding-right: 0;
+    border-right: 0;
+    border-radius: 30px 0 0 30px;
+    top: 80px;
+    right: 0px;
+}
+
+
+#topicon-container {
+    padding-top: 0;
+    border-top: 0;
+    border-radius: 0 0 30px 30px;
+    top: 0;
+    left: 95px;
+}
+
+#cross-container {
+    padding-bottom: 0;
+    border-bottom: 0;
+    border-radius: 30px 30px 0 0;
+    bottom: 0;
+    left: 95px;
+}
+
+#middletext {
+    display: block;
+    box-sizing: border-box;
+    width: 220px;
+    padding:50px;
+    padding-top:100px;
+    text-align:center;
 }
 
 img {

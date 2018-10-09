@@ -7,6 +7,13 @@ describe('The Sad Face Page', () => {
     watchFace = document.getElementById('watch-face');
   });
 
+  describe('#render', () => {
+    it('should contain a sad mood message', () => {
+      const page = new SadPage();
+      expect(page.render()).toContain('Hope you feel better soon!');
+    });
+  });
+
   describe('#bottomButtonEvent', () => {
     it('goes to root page', () => {
       const props = {

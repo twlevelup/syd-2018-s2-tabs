@@ -9,6 +9,8 @@ const EmergencyAlertPage = require('./pages/emergencyAlertPage');
 const MapsPage = require('./pages/mapsPage');
 const DirectionPage = require('./pages/directionPage');
 const Place1Page = require('./pages/place1Page');
+const MorningPage = require('./pages/morningPage');
+const EveningPage = require('./pages/eveningPage');
 
 
 module.exports = {
@@ -22,6 +24,8 @@ module.exports = {
   'emergencyAlert': EmergencyAlertPage,
   'maps' : MapsPage,
   'direction': DirectionPage,
-  'place1': Place1Page
+  'place1': Place1Page,
+  'morning': MorningPage,
+  'evening': EveningPage
 
 };
