@@ -7,7 +7,9 @@ class MapsPage extends BasePage {
   leftButtonEvent() {
     this.navigate('direction');
   }
-
+  topButtonEvent() {
+    this.navigate('place1');
+  }
 
 }
 

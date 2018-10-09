@@ -30,7 +30,7 @@ describe('MapsPage', () => {
   })
 
   describe('#leftButtonEvent', () => {
-    it('goes to HomePage', () => {
+    it('goes to DirectionPage', () => {
       const props = {
         navigate: () => { },
       };
@@ -39,6 +39,20 @@ describe('MapsPage', () => {
 
       page.leftButtonEvent();
       expect(page.navigate).toHaveBeenCalledWith('direction');
+    })
+  })
+
+  describe('#topButtonEvent', () => {
+    it('goes to Place1Page', () => {
+      const props = {
+        navigate: () => { },
+      };
+      const page = new MapsPage(props);
+      spyOn(page, 'navigate');
+
+      page.topButtonEvent();
+      expect(page.navigate).toHaveBeenCalledWith('place1');
+
     })
   })
 })
