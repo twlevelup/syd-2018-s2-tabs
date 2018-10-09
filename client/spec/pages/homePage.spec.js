@@ -1,7 +1,7 @@
 const HomePage = require('../../src/js/pages/homePage');
 const StorageHub = require('watch-framework').StorageHub;
 const AudioHub = require('watch-framework').AudioHub;
-
+const EmergencyAlertPage = require('../../src/js/pages/emergencyAlertPage');
 describe('HomePage', () => {
   let watchFace;
   beforeEach(() => {
@@ -34,19 +34,7 @@ describe('HomePage', () => {
     });
   });
 
-  describe('#holdButtonEvent', () => {
-  it('should take the user to the emergency alert page', () => {
-    const props = {
-      navigate: () => { },
-    };
 
-    const page = new HomePage(props);
-    spyOn(page, 'navigate');
-
-    page.holdButtonEvent();
-    expect(page.navigate).toHaveBeenCalledWith('emergencyAlert');
-  });
-  });
 
   describe('#faceButtonEvent', () => {
   it('should take the user to the demo page', () => {
@@ -76,6 +64,34 @@ describe('HomePage', () => {
     });
   });
 
+  describe('#topButtonEvent', () => {
+    it('goes to emergencyAlertPage', () => {
+      const props = {
+        navigate: () => { },
+      };
+      const page = new HomePage(props);
+      page.pageWillLoad()
+      spyOn(page, 'navigate');
+      page.topButtonEvent()
+      page.topButtonEvent()
+
+      expect(page.navigate).toHaveBeenCalledWith('emergencyAlert');
+    });
+
+    it ('does not go to emergencyAlertPage', () => {
+      const props = {
+        navigate: () => { },
+
+      };
+      const page = new HomePage(props);
+      page.pageWillLoad();
+      spyOn(page, 'navigate');
+      page.topButtonEvent();
+      expect(page.navigate).toHaveBeenCalledTimes(0);
+    });
+  });
+
+
   describe('#bottomButtonEvent', () => {
     it('scrolls page down', () => {
 
@@ -87,7 +103,7 @@ describe('HomePage', () => {
 
     });
   });
-
+/*
   describe('#topButtonEvent', () => {
     it('scrolls page up', () => {
       const page = new HomePage({ watchFace });
@@ -97,7 +113,7 @@ describe('HomePage', () => {
       expect(watchFace.scrollTop).toEqual(-40);
     });
   });
-
+*/
 
 
   describe('#updateTimeDisplay', () => {
