@@ -1,3 +1,19 @@
-body {
+#countDownImg{
+  display: block;
+  height: 21vh;
+  position: absolute;
+  z-index: 10;
+  bottom: 52px;
+  left: 48px;
+  border-radius: 4px;
+}
 
+
+#emergencyMsg {
+  color: red;
+  text-align: center;
+  margin-block-start: 0;
+  position: absolute;
+  z-index: 10;
+  font-size: 1.2em;
 }
