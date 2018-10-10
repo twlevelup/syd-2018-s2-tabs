@@ -58,31 +58,28 @@ class HomePage extends BasePage {
   }
 
   holdButtonEvent() {
-    //this.navigate('emergencyAlert')
+  
   }
 
   topButtonEvent() {
-
-     // this.watchFace.scrollTop -= 40;
-     this.counter+=1;
-     if(this.counter === 1){
-       this.firstClick = Date.now()
-       console.log(this.firstClick + ' this is a first click')
-     }
-     if(this.counter === 2){
-       this.secondClick = Date.now()
-       console.log(this.secondClick + ' this is a secondClick click')
-       console.log(this.secondClick-this.firstClick+' this is math stuff')
-       if((this.secondClick-this.firstClick)<2000){
-         this.navigate('emergencyAlert')
-       }else{
-         this.firstClick = this.secondClick;
-         console.log(this.firstClick + ' this is a first reassign value')
-         this.secondClick = 0;
-         this.counter = 1;
-       }
-     }
-
+    this.counter += 1;
+    if (this.counter === 1) {
+     this.firstClick = Date.now();
+     //console.log(this.firstClick + ' this is a first click');
+    }
+    if(this.counter === 2) {
+      this.secondClick = Date.now();
+        //console.log(this.secondClick + ' this is a secondClick click');
+        //console.log(this.secondClick-this.firstClick+' this is math stuff');
+      if ( (this.secondClick-this.firstClick) < 2000) {
+        this.navigate('emergencyAlert')
+      } else {
+        this.firstClick = this.secondClick;
+          //console.log(this.firstClick + ' this is a first reassign value');
+        this.secondClick = 0;
+        this.counter = 1;
+      }
+    }
   }
 
   bottomButtonEvent() {
