@@ -7,6 +7,13 @@ describe('The Happy Face Page', () => {
     watchFace = document.getElementById('watch-face');
   });
 
+  describe('#render', () => {
+    it('should contain a happy mood message', () => {
+      const page = new HappyPage();
+      expect(page.render()).toContain('Hope you have a nice day!');
+    });
+  });
+
   describe('#bottomButtonEvent', () => {
     it('goes to root page', () => {
       const props = {

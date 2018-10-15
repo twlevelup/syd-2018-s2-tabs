@@ -103,18 +103,6 @@ describe('HomePage', () => {
 
     });
   });
-/*
-  describe('#topButtonEvent', () => {
-    it('scrolls page up', () => {
-      const page = new HomePage({ watchFace });
-
-      page.topButtonEvent();
-
-      expect(watchFace.scrollTop).toEqual(-40);
-    });
-  });
-*/
-
 
   describe('#updateTimeDisplay', () => {
     it('updateTimeDisplays calls clock-time if its in the window', () => {

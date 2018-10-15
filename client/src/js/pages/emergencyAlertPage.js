@@ -1,5 +1,5 @@
 const BasePage = require('watch-framework').BasePage;
-const countdowngif = require('../../images/logo.png');
+const countdowngif = require('../../images/countdown.gif');
 const cross = require('../../images/cross.png');
 
 class EmergencyAlertPage extends BasePage {

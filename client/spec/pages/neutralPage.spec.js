@@ -7,6 +7,13 @@ describe('The Neutral Face Page', () => {
     watchFace = document.getElementById('watch-face');
   });
 
+  describe('#render', () => {
+    it('should contain a neutral mood message', () => {
+      const page = new NeutralPage();
+      expect(page.render()).toContain('Hope your day looks up!');
+    });
+  });
+
   describe('#bottomButtonEvent', () => {
     it('goes to root page', () => {
       const props = {

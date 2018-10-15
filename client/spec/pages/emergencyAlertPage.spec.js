@@ -10,7 +10,7 @@ describe('The Emergency Alert Page', () => {
   describe('#render', () => {
     it('should contain the correct text', () => {
       const page = new EmergencyAlertPage();
-      expect(page.render()).toContain('This is an emergency alert!');
+      expect(page.render()).toContain('This is an Emergency Alert!');
     });
   });
 });
