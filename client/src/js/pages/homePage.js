@@ -25,7 +25,8 @@ class HomePage extends BasePage {
   }
 
   getDateTime() {
-    const dateTime = new Date(Date.now()).toLocaleString().split(",");
+    const date = new Date(Date.now());
+    const dateTime = date.toLocaleString().split(",");
     return {
       date: dateTime[0],
       time: dateTime[1],
