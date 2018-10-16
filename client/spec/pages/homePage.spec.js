@@ -26,30 +26,25 @@ describe('HomePage', () => {
   });
 
   describe('#leftButtonEvent', () => {
+    it('goes to first contact page', () => {
+      const props = {
+        navigate: () => { },
+      };
+      const page = new HomePage(props);
+      spyOn(page, 'navigate');
+
+      page.leftButtonEvent();
+      expect(page.navigate).toHaveBeenCalledWith('contactpolice');
+    });
+    /*
     it('audioHub plays a sound', () => {
       spyOn(AudioHub, 'playSound')
       const page = new HomePage();
       page.leftButtonEvent();
       expect(AudioHub.playSound).toBeCalledWith('./sounds/plop.mp3');
     });
+    */
   });
-
-
-
-  describe('#faceButtonEvent', () => {
-  it('should take the user to the demo page', () => {
-    const props = {
-      navigate: () => { },
-    };
-
-
-    const page = new HomePage(props);
-    spyOn(page, 'navigate');
-
-    page.faceButtonEvent();
-    expect(page.navigate).toHaveBeenCalledWith('sad');
-  });
-});
 
   describe('#rightButtonEvent', () => {
     it('goes to map page', () => {

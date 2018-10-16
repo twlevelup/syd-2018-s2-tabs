@@ -62,13 +62,8 @@ class HomePage extends BasePage {
   }
 
   leftButtonEvent() {
-    AudioHub.playSound(plop);
-  }
-
-
-
-  faceButtonEvent() {
-    this.navigate('sad');
+    this.navigate('contactpolice');
+    //AudioHub.playSound(plop);
   }
 
   holdButtonEvent() {
