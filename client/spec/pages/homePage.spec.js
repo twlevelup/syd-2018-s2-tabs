@@ -81,7 +81,6 @@ describe('HomePage', () => {
     it ('does not go to emergencyAlertPage', () => {
       const props = {
         navigate: () => { },
-
       };
       const page = new HomePage(props);
       page.pageWillLoad();
@@ -110,19 +109,37 @@ describe('HomePage', () => {
 
       watchFace.innerHTML = page.render();
 
-      jest.spyOn(page,"getDateTime");
+      jest.spyOn(page, "getDateTime");
       page.updateTimeDisplay(page.getDateTime);
       expect(page.getDateTime).toHaveBeenCalledTimes(1);
     });
-  });
 
-  describe('#updateTimeDisplay', () => {
-    it('updateTimeDisplays does not call clock-time if its not in the window', () => {
-      const page = new HomePage();
+    it('should navigate to morningPage if 7am', () => {
 
-      jest.spyOn(page,"getDateTime");
-      page.updateTimeDisplay(page.getDateTime);
-      expect(page.getDateTime).toHaveBeenCalledTimes(0);
+      const props = {
+        navigate: jest.fn(),
+      };
+      const page = new HomePage(props);
+      const mockDateTime = { time: page.morningTime };
+      jest.spyOn(page, "getDateTime").mockReturnValue(mockDateTime);
+      jest.useFakeTimers();
+      page.updateTimeEverySecond();
+      jest.runTimersToTime(1000);
+      expect(props.navigate).toBeCalledWith('morning');
+    });
+
+    it('should navigate to eveningPage if 5pm', () => {
+
+      const props = {
+        navigate: jest.fn(),
+      };
+      const page = new HomePage(props);
+      const mockDateTime = { time: page.eveningTime };
+      jest.spyOn(page, "getDateTime").mockReturnValue(mockDateTime);
+      jest.useFakeTimers();
+      page.updateTimeEverySecond();
+      jest.runTimersToTime(1000);
+      expect(props.navigate).toBeCalledWith('evening');
     });
   });
 

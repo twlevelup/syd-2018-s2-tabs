@@ -6,7 +6,8 @@ const plop = './sounds/plop.mp3';
 
 class HomePage extends BasePage {
   template = require('../../templates/homePage.hbs');
-
+  morningTime = '07:00:00';
+  eveningTime = '17:00:00';
   pageWillLoad() {
     StorageHub.setData('contacts', [
       { name: 'Ray', phoneNumber: '0431 111 111' },
@@ -33,15 +34,26 @@ class HomePage extends BasePage {
     };
   }
 
+  checkTime(time) {
+    if (time.trim() === this.morningTime) {
+      this.navigate('morning');
+    }
+    if (time.trim() === this.eveningTime) {
+      this.navigate('evening');
+    }
+  }
+
   updateTimeEverySecond() {
     setInterval(() => this.updateTimeDisplay(this.getDateTime), 1000);
   }
 
   updateTimeDisplay(getTime) {
+    const timeNow = getTime().time;
     const clockTime = document.getElementById("clock-time");
     if (clockTime) {
-      clockTime.textContent = getTime().time;
+      clockTime.textContent = timeNow;
     }
+    this.checkTime(timeNow);
   }
 
   rightButtonEvent() {
