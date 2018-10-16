@@ -15,5 +15,6 @@ describe('routes', () => {
     expect(routes['morning']).toBeDefined();
     expect(routes['evening']).toBeDefined();
     expect(routes['contactpolice']).toBeDefined();
+    expect(routes['contacthospital']).toBeDefined();
   });
 });

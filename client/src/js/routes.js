@@ -13,6 +13,7 @@ const MorningPage = require('./pages/morningPage');
 const EveningPage = require('./pages/eveningPage');
 const EmergencyMessageSentPage = require('./pages/emergencyMessageSentPage');
 const ContactPolicePage = require('./pages/contactPolicePage');
+const ContactHospitalPage = require('./pages/contactHospitalPage');
 
 module.exports = {
   '/': HomePage,
@@ -29,6 +30,7 @@ module.exports = {
   'morning': MorningPage,
   'evening': EveningPage,
   'emergencyMessageSentPage' : EmergencyMessageSentPage,
-  'contactpolice': ContactPolicePage
+  'contactpolice': ContactPolicePage, 
+  'contacthospital': ContactHospitalPage
 
 };
