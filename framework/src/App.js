@@ -31,8 +31,10 @@ module.exports = class App {
     }
 
     window.onhashchange = (hashChangeEvent) => {
-      const path = hashChangeEvent.newURL.split("#")[1];
-      this.navigate(path);
+      if (hashChangeEvent.newURL !== hashChangeEvent.oldURL) {
+        const path = hashChangeEvent.newURL.split("#")[1];
+        this.navigate(path);
+      }
     }
 
     NotificationHub.onHide(hideNotification);

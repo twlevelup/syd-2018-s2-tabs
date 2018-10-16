@@ -57,8 +57,14 @@ describe('App', () => {
   describe('#onhashchange', () => {
     it('should respond to window hashChangeEvent', () => {
       spyOn(app, 'navigate').and.stub();
-      window.onhashchange({ newURL: "http://localhost:8080/#contacts" })
+      window.onhashchange({ newURL: "http://localhost:8080/#contacts", oldURL: "http://localhost:8080/#"  })
       expect(app.navigate).toHaveBeenCalledWith("contacts")
+    })
+
+    it('should not respond if the hash url has not changed', () => {
+      spyOn(app, 'navigate').and.stub();
+      window.onhashchange({ newURL: "http://localhost:8080/#contacts", oldURL: "http://localhost:8080/#contacts" })
+      expect(app.navigate).not.toHaveBeenCalled();
     })
   })
 
