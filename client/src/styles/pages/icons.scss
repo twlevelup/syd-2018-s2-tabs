@@ -6,7 +6,7 @@ img {
 
 // Bare icons styling
 
-#cross, #lefticon, #righticon, #topicon {
+#cross-circle, #lefticon, #righticon, #topicon {
     display: block;
     width: 45px;
     height: 45px;
@@ -14,7 +14,7 @@ img {
     z-index: 10;
 }
 
-#cross {
+#cross-circle {
     bottom: 0px;
     left: 105px;
 }
@@ -36,7 +36,7 @@ img {
 
 // Bordered icon styling
 
-#cross-container, #lefticon-container, #righticon-container, #topicon-container {
+#cross, #lefticon-container, #righticon-container, #topicon-container {
     display: block;
     width: 40px;
     height: 40px;
@@ -47,7 +47,7 @@ img {
     z-index: 10;
 }
 
-#cross-container {
+#cross {
     padding-bottom: 0;
     border-bottom: 0;
     border-radius: 30px 30px 0 0;
