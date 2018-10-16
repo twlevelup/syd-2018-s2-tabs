@@ -7,7 +7,7 @@ const plop = './sounds/plop.mp3';
 class HomePage extends BasePage {
   template = require('../../templates/homePage.hbs');
   morningTime = '07:00:00';
-  eveningTime = '17:00:50';
+  eveningTime = '17:00:00';
 
   pageWillLoad() {
     StorageHub.setData('contacts', [
