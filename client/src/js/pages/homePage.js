@@ -72,9 +72,11 @@ class HomePage extends BasePage {
   }
 
   holdButtonEvent() {
-  
-  }
 
+  }
+  topButtonEventHold(){
+    this.navigate('emergencyAlert')
+  }
   topButtonEvent() {
     this.counter += 1;
     if (this.counter === 1) {
@@ -86,6 +88,7 @@ class HomePage extends BasePage {
         //console.log(this.secondClick + ' this is a secondClick click');
         //console.log(this.secondClick-this.firstClick+' this is math stuff');
       if ( (this.secondClick-this.firstClick) < 2000) {
+        console.log('moveing')
         this.navigate('emergencyAlert')
       } else {
         this.firstClick = this.secondClick;

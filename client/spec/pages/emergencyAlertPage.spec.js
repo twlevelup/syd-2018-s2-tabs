@@ -13,4 +13,48 @@ describe('The Emergency Alert Page', () => {
       expect(page.render()).toContain('This is an Emergency Alert!');
     });
   });
+
+  describe('#bottomButtonEvent', () => {
+    it('take you back to home screen', () => {
+
+      const props = {
+        navigate: () => { },
+      };
+
+
+      const page = new EmergencyAlertPage(props);
+      spyOn(page, 'navigate');
+      page.bottomButtonEvent()
+      expect(page.navigate).toHaveBeenCalledWith('/');
+
+    });
+  });
+
+
+  describe('#5secondEvent', () => {
+    it('take you to EmergencyMessageSentPage after 5 seconds', () => {
+
+      const props = {
+        navigate: () => { },
+      };
+
+      const page = new EmergencyAlertPage(props);
+      spyOn(page, 'navigate');
+      jest.useFakeTimers();
+      page.pageWillLoad();
+      jest.runTimersToTime(6001);
+
+      expect(page.navigate).toHaveBeenCalledWith('emergencyMessageSentPage');
+
+    });
+  });
+
+
+
+
+
+
+
+
+
 });
