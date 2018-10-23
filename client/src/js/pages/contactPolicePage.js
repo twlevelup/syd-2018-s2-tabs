@@ -17,6 +17,14 @@ class contactPolicePage extends BasePage {
   bottomButtonEvent() {
     this.navigate('/');
   }
+
+  rightButtonEvent() {
+    this.navigate('contacthospital');
+  }
+
+  leftButtonEvent() {
+    this.navigate('contactfriend2');
+  }
 }
 
 module.exports = contactPolicePage;

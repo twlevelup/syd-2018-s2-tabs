@@ -1,14 +1,14 @@
 const BasePage = require('watch-framework').BasePage;
-const hospital = require('../../images/hospital.png');
+const friend = require('../../images/woman.png');
 const cross = require('../../images/cross.png');
 const left = require('../../images/arrowleft.png');
 const right = require('../../images/arrowright.png');
 
-class contactHospitalPage extends BasePage {
-  template = require('../../templates/contactHospitalPage.hbs');
+class contactFriendPage extends BasePage {
+  template = require('../../templates/contactFriendPage.hbs');
 
   pageWillLoad() {
-    this.hospital = hospital;
+    this.friend = friend;
     this.cross = cross;
     this.left = left;
     this.right = right;
@@ -19,12 +19,12 @@ class contactHospitalPage extends BasePage {
   }
 
   rightButtonEvent() {
-    this.navigate('contactfriend');
+    this.navigate('contactfriend2');
   }
 
   leftButtonEvent() {
-    this.navigate('contactpolice');
+    this.navigate('contacthospital');
   }
 }
 
-module.exports = contactHospitalPage;
+module.exports = contactFriendPage;

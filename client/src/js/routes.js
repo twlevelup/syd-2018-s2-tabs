@@ -13,6 +13,8 @@ const MorningPage = require('./pages/morningPage');
 const EveningPage = require('./pages/eveningPage');
 const EmergencyMessageSentPage = require('./pages/emergencyMessageSentPage');
 const ContactPolicePage = require('./pages/contactPolicePage');
+const ContactFriendPage = require('./pages/contactFriendPage');
+const ContactFriend2Page = require('./pages/contactFriend2Page');
 const ContactHospitalPage = require('./pages/contactHospitalPage');
 const GamesPage = require('./pages/gamesPage');
 const MedicinePage = require('./pages/medicinePage');
@@ -35,6 +37,8 @@ module.exports = {
   'emergencyMessageSentPage' : EmergencyMessageSentPage,
   'contactpolice': ContactPolicePage,
   'contacthospital': ContactHospitalPage,
+  'contactfriend': ContactFriendPage,
+  'contactfriend2': ContactFriend2Page,
   'takemed': MedicinePage
 
 };

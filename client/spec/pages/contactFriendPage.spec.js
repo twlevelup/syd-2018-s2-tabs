@@ -1,6 +1,6 @@
-const contactHospitalPage = require('../../src/js/pages/contactHospitalPage');
+const contactFriendPage = require('../../src/js/pages/contactFriendPage');
 
-describe('The Contact Hospital Page', () => {
+describe('The Contact First Friend Page', () => {
   let watchFace;
   beforeEach(() => {
     document.body.innerHTML = `<div id='watch-face' style='height: 100px; width: 100px;'></div>`;
@@ -9,9 +9,9 @@ describe('The Contact Hospital Page', () => {
 
   describe('#render', () => {
     it('should contain the correct text', () => {
-      const page = new contactHospitalPage();
-      expect(page.render()).toContain('Hospital');
-      expect(page.render()).toContain('1800-422-599');
+      const page = new contactFriendPage();
+      expect(page.render()).toContain('Bekkie');
+      expect(page.render()).toContain('0450-000-000');
     });
   });
 
@@ -20,7 +20,7 @@ describe('The Contact Hospital Page', () => {
       const props = {
         navigate: () => { },
       };
-      const page = new contactHospitalPage(props);
+      const page = new contactFriendPage(props);
       spyOn(page, 'navigate');
 
       page.bottomButtonEvent();
@@ -29,28 +29,28 @@ describe('The Contact Hospital Page', () => {
   });
 
   describe('#rightButtonEvent', () => {
-    it('goes to first friend contact page', () => {
+    it('goes to second friend contact page', () => {
       const props = {
         navigate: () => { },
       };
-      const page = new contactHospitalPage(props);
+      const page = new contactFriendPage(props);
       spyOn(page, 'navigate');
 
       page.rightButtonEvent();
-      expect(page.navigate).toHaveBeenCalledWith('contactfriend');
+      expect(page.navigate).toHaveBeenCalledWith('contactfriend2');
     });
   });
 
   describe('#leftButtonEvent', () => {
-    it('goes to police contact page', () => {
+    it('goes to hospital contact page', () => {
       const props = {
         navigate: () => { },
       };
-      const page = new contactHospitalPage(props);
+      const page = new contactFriendPage(props);
       spyOn(page, 'navigate');
 
       page.leftButtonEvent();
-      expect(page.navigate).toHaveBeenCalledWith('contactpolice');
+      expect(page.navigate).toHaveBeenCalledWith('contacthospital');
     });
   });
 });

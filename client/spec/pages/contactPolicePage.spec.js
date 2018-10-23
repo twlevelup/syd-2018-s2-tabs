@@ -27,4 +27,17 @@ describe('The Contact Police Page', () => {
       expect(page.navigate).toHaveBeenCalledWith('/');
     });
   });
+
+  describe('#leftButtonEvent', () => {
+    it('goes to second friend contact page', () => {
+      const props = {
+        navigate: () => { },
+      };
+      const page = new contactPolicePage(props);
+      spyOn(page, 'navigate');
+
+      page.leftButtonEvent();
+      expect(page.navigate).toHaveBeenCalledWith('contactfriend2');
+    });
+  });
 });
