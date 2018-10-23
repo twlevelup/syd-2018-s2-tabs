@@ -3,6 +3,10 @@ const StorageHub = require('watch-framework').StorageHub;
 const AudioHub = require('watch-framework').AudioHub;
 const logo = require('../../images/logo.png');
 const plop = './sounds/plop.mp3';
+const appsIcon = require('../../images/appsIcon.png');
+const contactIcon = require('../../images/contactIcon.png');
+const dobuleClickIcon = require('../../images/doubleExclamationIcon.png');
+const mapIcon = require('../../images/mapIcon.jpg');
 
 class HomePage extends BasePage {
   template = require('../../templates/homePage.hbs');
@@ -24,6 +28,10 @@ class HomePage extends BasePage {
     this.counter = 0;
     this.firstClick = null;
     this.secondClick = null;
+    this.appsIcon = appsIcon;
+    this.contactIcon = contactIcon;
+    this.dobuleClickIcon = dobuleClickIcon;
+    this.mapIcon = mapIcon;
   }
 
   getDateTime() {

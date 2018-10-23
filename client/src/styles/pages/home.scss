@@ -1,3 +1,58 @@
 #home {
   font-style: italic;
 }
+
+#time {
+    display: block;
+    box-sizing: border-box;
+    width: 220px;
+    padding: 81px 45px 0 45px;
+    text-align: center;
+    font-size: 23px;
+    font-weight:bold;
+}
+
+#cross, #lefticon, #righticon, #topicon {
+    display: block;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border: solid white 2px;
+    background: #3f484a;
+    position: absolute;
+    z-index: 10;
+}
+
+#cross {
+    padding-bottom: 0;
+    border-bottom: 0;
+    border-radius: 30px 30px 0 0;
+    bottom: 0;
+    left: 95px;
+}
+
+#lefticon {
+    padding-left: 0;
+    border-left:0;
+    border-radius:0 30px 30px 0;
+    top: 80px;
+    left: 0px;
+
+}
+
+#righticon {
+    padding-right: 0;
+    border-right: 0;
+    border-radius: 30px 0 0 30px;
+    top: 80px;
+    right: 0px;
+}
+
+
+#topicon {
+    padding-top: 0;
+    border-top: 0;
+    border-radius: 0 0 30px 30px;
+    top: 0;
+    left: 95px;
+}
