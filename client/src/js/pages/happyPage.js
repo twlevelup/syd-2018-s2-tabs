@@ -10,7 +10,7 @@ class HappyPage extends BasePage {
   }
 
   template = require('../../templates/happyPage.hbs');
-
+  
   bottomButtonEvent() {
     this.navigate('/');
   }
