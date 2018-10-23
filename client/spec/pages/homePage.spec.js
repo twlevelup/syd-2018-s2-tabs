@@ -137,6 +137,22 @@ describe('HomePage', () => {
       jest.runTimersToTime(1000);
       expect(props.navigate).toBeCalledWith('evening');
     });
+
+    it('should navigate to medicinePage if 12pm', () => {
+
+      const props = {
+        navigate: jest.fn(),
+      };
+      const page = new HomePage(props);
+      const mockDateTime = { time: page.medicineTime };
+      jest.spyOn(page, "getDateTime").mockReturnValue(mockDateTime);
+      jest.useFakeTimers();
+      page.updateTimeEverySecond();
+      jest.runTimersToTime(1000);
+      expect(props.navigate).toBeCalledWith('takemed');
+    });
+
+    
   });
 
   describe('#updateTimeEverySecond', () => {

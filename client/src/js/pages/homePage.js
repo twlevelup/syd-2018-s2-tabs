@@ -12,6 +12,7 @@ class HomePage extends BasePage {
   template = require('../../templates/homePage.hbs');
   morningTime = '07:00:00';
   eveningTime = '17:00:00';
+  medicineTime = '12:00:00';
 
   pageWillLoad() {
     StorageHub.setData('contacts', [
@@ -50,6 +51,9 @@ class HomePage extends BasePage {
     if (time.trim() === this.eveningTime) {
       this.navigate('evening');
     }
+    if (time.trim() === this.medicineTime) {
+      this.navigate('takemed');
+    }
   }
 
   updateTimeEverySecond() {
@@ -79,6 +83,7 @@ class HomePage extends BasePage {
   }
   topButtonEventHold(){
     this.navigate('emergencyAlert')
+    
   }
   topButtonEvent() {
     this.counter += 1;
