@@ -95,7 +95,7 @@ class HomePage extends BasePage {
   }
 
   bottomButtonEvent() {
-    this.watchFace.scrollTop += 40;
+    this.navigate('games');
   }
 }
 
