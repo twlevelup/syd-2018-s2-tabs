@@ -9,24 +9,20 @@ class GamesPage extends BasePage {
     this.cross = cross;
   }
 
-  template = require('../../templates/gamesPages.hbs');
+  template = require('../../templates/calendarPage.hbs');
 
   bottomButtonEvent() {
     this.navigate('/');
   }
 
-<<<<<<< HEAD
-  faceButtonEvent(){
-    this.navigate('gamesList');
-=======
   leftButtonEvent() {
-    this.navigate('calendar');
+    this.navigate('games');
   }
 
   rightButtonEvent() {
-    this.navigate('calendar');
->>>>>>> [Hongyi] calendar page initialize
+    this.navigate('games');
   }
+
 }
 
 module.exports = GamesPage;

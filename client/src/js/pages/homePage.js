@@ -83,7 +83,12 @@ class HomePage extends BasePage {
   }
 
   topButtonEventHold(){
+<<<<<<< HEAD
     
+=======
+    this.navigate('emergencyAlert')
+
+>>>>>>> [Hongyi] calendar page initialize
   }
 
   topButtonEvent() {
