@@ -18,6 +18,7 @@ const ContactFriend2Page = require('./pages/contactFriend2Page');
 const ContactHospitalPage = require('./pages/contactHospitalPage');
 const GamesPage = require('./pages/gamesPage');
 const MedicinePage = require('./pages/medicinePage');
+const GamesListPage = require('./pages/gamesListPage');
 
 module.exports = {
   '/': HomePage,
@@ -39,6 +40,7 @@ module.exports = {
   'contacthospital': ContactHospitalPage,
   'contactfriend': ContactFriendPage,
   'contactfriend2': ContactFriend2Page,
-  'takemed': MedicinePage
+  'takemed': MedicinePage,
+  'gamesList':GamesListPage
 
 };

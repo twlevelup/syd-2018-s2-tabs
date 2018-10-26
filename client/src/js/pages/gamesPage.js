@@ -14,6 +14,10 @@ class GamesPage extends BasePage {
   bottomButtonEvent() {
     this.navigate('/');
   }
+
+  faceButtonEvent(){
+    this.navigate('gamesList');
+  }
 }
 
 module.exports = GamesPage;

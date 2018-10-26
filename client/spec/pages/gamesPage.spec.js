@@ -21,9 +21,23 @@ describe('The Games Page', () => {
       };
       const page = new GamesPage(props);
       spyOn(page, 'navigate');
-  
+
       page.bottomButtonEvent();
       expect(page.navigate).toHaveBeenCalledWith('/');
+    });
+  });
+
+
+  describe('#faceButtonEvent', () => {
+    it('goes to gamesListPage', () => {
+      const props = {
+        navigate: () => { },
+      };
+      const page = new GamesPage(props);
+      spyOn(page, 'navigate');
+
+      page.faceButtonEvent();
+      expect(page.navigate).toHaveBeenCalledWith('gamesList');
     });
   });
 
