@@ -18,11 +18,8 @@ const ContactFriend2Page = require('./pages/contactFriend2Page');
 const ContactHospitalPage = require('./pages/contactHospitalPage');
 const GamesPage = require('./pages/gamesPage');
 const MedicinePage = require('./pages/medicinePage');
-<<<<<<< HEAD
 const GamesListPage = require('./pages/gamesListPage');
-=======
 const CalendarPage = require('./pages/calendarPage')
->>>>>>> [Hongyi] calendar page initialize
 
 module.exports = {
   '/': HomePage,
@@ -45,10 +42,7 @@ module.exports = {
   'contactfriend': ContactFriendPage,
   'contactfriend2': ContactFriend2Page,
   'takemed': MedicinePage,
-<<<<<<< HEAD
-  'gamesList':GamesListPage
-=======
+  'gamesList':GamesListPage,
   'calendar': CalendarPage
->>>>>>> [Hongyi] calendar page initialize
 
 };

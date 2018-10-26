@@ -15,17 +15,16 @@ class GamesPage extends BasePage {
     this.navigate('/');
   }
 
-<<<<<<< HEAD
-  faceButtonEvent(){
+  faceButtonEvent() {
     this.navigate('gamesList');
-=======
+  }
+
   leftButtonEvent() {
     this.navigate('calendar');
   }
 
   rightButtonEvent() {
     this.navigate('calendar');
->>>>>>> [Hongyi] calendar page initialize
   }
 }
 
