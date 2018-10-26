@@ -81,10 +81,11 @@ class HomePage extends BasePage {
   holdButtonEvent() {
 
   }
+
   topButtonEventHold(){
-    this.navigate('emergencyAlert')
     
   }
+
   topButtonEvent() {
     this.counter += 1;
     if (this.counter === 1) {

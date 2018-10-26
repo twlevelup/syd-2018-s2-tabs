@@ -42,7 +42,7 @@ describe('MapsPage', () => {
     })
   })
 
-  describe('#topButtonEvent', () => {
+  describe('#rightButtonEvent', () => {
     it('goes to Place1Page', () => {
       const props = {
         navigate: () => { },
@@ -50,7 +50,7 @@ describe('MapsPage', () => {
       const page = new MapsPage(props);
       spyOn(page, 'navigate');
 
-      page.topButtonEvent();
+      page.rightButtonEvent();
       expect(page.navigate).toHaveBeenCalledWith('place1');
 
     })
