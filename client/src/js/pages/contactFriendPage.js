@@ -1,10 +1,10 @@
-const BasePage = require('watch-framework').BasePage;
+const TabsBasePage = require('./tabsBasePage');
 const friend = require('../../images/woman.png');
 const cross = require('../../images/cross.png');
 const left = require('../../images/arrowleft.png');
 const right = require('../../images/arrowright.png');
 
-class contactFriendPage extends BasePage {
+class contactFriendPage extends TabsBasePage {
   template = require('../../templates/contactFriendPage.hbs');
 
   pageWillLoad() {

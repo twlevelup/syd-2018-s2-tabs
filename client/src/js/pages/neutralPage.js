@@ -1,8 +1,8 @@
-const BasePage = require('watch-framework').BasePage;
+const TabsBasePage = require('./tabsBasePage');
 const neutralface = require('../../images/neutralface.png');
 const cross = require('../../images/cross.png');
 
-class NeutralPage extends BasePage {
+class NeutralPage extends TabsBasePage {
 
   pageWillLoad() {
     this.neutralface = neutralface;

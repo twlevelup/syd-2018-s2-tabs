@@ -1,5 +1,5 @@
-const BasePage = require('watch-framework').BasePage;
-class MapsPage extends BasePage {
+const TabsBasePage = require('./tabsBasePage');
+class MapsPage extends TabsBasePage {
   template = require('../../templates/mapsPage.hbs');
 
   bottomButtonEvent() {

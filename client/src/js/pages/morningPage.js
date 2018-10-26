@@ -1,10 +1,10 @@
-const BasePage = require('watch-framework').BasePage;
+const TabsBasePage = require('./tabsBasePage');
 const sadface = require('../../images/sadface.png');
 const happyface = require('../../images/happyface.png');
 const neutralface = require('../../images/neutralface.png');
 const cross = require('../../images/cross.png');
 
-class MorningPage extends BasePage {
+class MorningPage extends TabsBasePage {
   template = require('../../templates/morningPage.hbs');
 
   pageWillLoad() {

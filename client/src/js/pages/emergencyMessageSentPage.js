@@ -1,7 +1,7 @@
-const BasePage = require('watch-framework').BasePage;
+const TabsBasePage = require('./tabsBasePage');
 const cross = require('../../images/cross.png');
 
-class EmergencyMessageSentPage extends BasePage {
+class EmergencyMessageSentPage extends TabsBasePage {
   pageWillLoad() {
     this.cross = cross;
   }

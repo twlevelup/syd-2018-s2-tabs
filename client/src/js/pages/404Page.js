@@ -1,6 +1,6 @@
-const BasePage = require('watch-framework').BasePage;
+const TabsBasePage = require('./tabsBasePage');
 
-class FourOhFourPage extends BasePage {
+class FourOhFourPage extends TabsBasePage {
   template = require('../../templates/404Page.hbs');
 
   leftButtonEvent() {

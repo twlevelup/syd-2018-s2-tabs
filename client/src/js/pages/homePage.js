@@ -1,4 +1,4 @@
-const BasePage = require('watch-framework').BasePage;
+const TabsBasePage = require('./tabsBasePage');
 const StorageHub = require('watch-framework').StorageHub;
 const AudioHub = require('watch-framework').AudioHub;
 const logo = require('../../images/logo.png');
@@ -8,13 +8,14 @@ const contactIcon = require('../../images/contactIcon.png');
 const dobuleClickIcon = require('../../images/doubleExclamationIcon.png');
 const mapIcon = require('../../images/mapIcon.jpg');
 
-class HomePage extends BasePage {
+class HomePage extends TabsBasePage {
   template = require('../../templates/homePage.hbs');
   morningTime = '07:00:00';
   eveningTime = '17:00:00';
   medicineTime = '12:00:00';
 
   pageWillLoad() {
+    super.pageWillLoad()
     StorageHub.setData('contacts', [
       { name: 'Ray', phoneNumber: '0431 111 111' },
       { name: 'Sinan', phoneNumber: '0431 222 222' },
@@ -83,7 +84,7 @@ class HomePage extends BasePage {
   }
 
   topButtonEventHold(){
-    this.navigate('emergencyAlert')
+
   }
 
   topButtonEvent() {

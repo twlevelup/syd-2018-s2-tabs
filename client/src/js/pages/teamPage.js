@@ -1,5 +1,5 @@
-const BasePage = require('watch-framework').BasePage;
-class TeamPage extends BasePage {
+const TabsBasePage = require('./tabsBasePage');
+class TeamPage extends TabsBasePage {
   template = require('../../templates/teamPage.hbs');
 }
 

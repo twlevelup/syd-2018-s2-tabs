@@ -1,8 +1,8 @@
-const BasePage = require('watch-framework').BasePage;
+const TabsBasePage = require('./tabsBasePage');
 const countdowngif = require('../../images/countdown.gif');
 const cross = require('../../images/cross.png');
 
-class EmergencyAlertPage extends BasePage {
+class EmergencyAlertPage extends TabsBasePage {
   pageWillLoad() {
     console.log('pageWillLoad')
     this.timerEvent = setTimeout(()=>{this.navigate('emergencyMessageSentPage')}, 6000)

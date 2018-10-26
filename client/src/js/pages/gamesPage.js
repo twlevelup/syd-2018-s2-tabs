@@ -1,8 +1,8 @@
-const BasePage = require('watch-framework').BasePage;
+const TabsBasePage = require('./tabsBasePage');
 const gamesIcon = require('../../images/gamepad.png');
 const cross = require('../../images/cross.png');
 
-class GamesPage extends BasePage {
+class GamesPage extends TabsBasePage {
 
   pageWillLoad() {
     this.gamesIcon = gamesIcon;

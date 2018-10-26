@@ -1,8 +1,8 @@
-const BasePage = require('watch-framework').BasePage;
+const TabsBasePage = require('./tabsBasePage');
 const happyface = require('../../images/happyface.png');
 const cross = require('../../images/cross.png');
 
-class HappyPage extends BasePage {
+class HappyPage extends TabsBasePage {
 
   pageWillLoad() {
     this.happyface = happyface;
@@ -10,7 +10,7 @@ class HappyPage extends BasePage {
   }
 
   template = require('../../templates/happyPage.hbs');
-  
+
   bottomButtonEvent() {
     this.navigate('/');
   }

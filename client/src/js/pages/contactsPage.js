@@ -1,7 +1,7 @@
-const BasePage = require('watch-framework').BasePage;
+const TabsBasePage = require('./tabsBasePage');
 const StorageHub = require('watch-framework').StorageHub;
 
-class ContactsPage extends BasePage {
+class ContactsPage extends TabsBasePage {
   template = require('../../templates/contactsPage.hbs');
 
   pageWillLoad() {

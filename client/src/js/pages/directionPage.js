@@ -1,5 +1,5 @@
-const BasePage = require('watch-framework').BasePage;
-class DirectionPage extends BasePage {
+const TabsBasePage = require('./tabsBasePage');
+class DirectionPage extends TabsBasePage {
   template = require('../../templates/directionPage.hbs');
   bottomButtonEvent() {
     this.navigate('/');
