@@ -9,7 +9,7 @@ class WalkingActivityPage extends BasePage {
     this.cross = cross;
   }
 
-  template = require('../../templates/WalkingActivityPage.hbs');
+  template = require('../../templates/walkingActivityPage.hbs');
 
   bottomButtonEvent() {
     this.navigate('/');

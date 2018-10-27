@@ -7,8 +7,6 @@ describe('The Walking walkingActivityPage Page', () => {
     watchFace = document.getElementById('watch-face');
   });
 
-
-
   describe('#bottomButtonEvent', () => {
     it('goes to root page', () => {
       const props = {
@@ -21,8 +19,4 @@ describe('The Walking walkingActivityPage Page', () => {
       expect(page.navigate).toHaveBeenCalledWith('/');
     });
   });
-
-
-
-
 });
