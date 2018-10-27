@@ -13,8 +13,6 @@ class EmergencyAlertPage extends TabsBasePage {
   }
   template = require('../../templates/emergencyAlertPage.hbs');
 
-
-
   bottomButtonEvent() {
 
     clearTimeout(this.timerEvent);
