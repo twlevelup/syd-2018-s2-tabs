@@ -19,4 +19,20 @@ describe('The Walking walkingActivityPage Page', () => {
       expect(page.navigate).toHaveBeenCalledWith('/');
     });
   });
+
+
+    describe('#faceButtonEvent', () => {
+      it('goes to doneWalkingPage', () => {
+        const props = {
+          navigate: () => { },
+        };
+        const page = new WalkingActivityPage(props);
+        spyOn(page, 'navigate');
+
+        page.faceButtonEvent();
+        expect(page.navigate).toHaveBeenCalledWith('doneWalking');
+      });
+    });
+
+
 });
