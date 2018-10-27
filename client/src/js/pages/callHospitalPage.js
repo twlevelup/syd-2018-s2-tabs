@@ -6,6 +6,7 @@ class CallHospitalPage extends TabsBasePage {
   template = require('../../templates/callHospitalPage.hbs');
 
   pageWillLoad() {
+    super.pageWillLoad();
     this.hospital = hospital;
     this.cross = cross;
     this.counter = 0;

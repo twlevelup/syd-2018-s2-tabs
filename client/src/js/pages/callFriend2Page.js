@@ -6,6 +6,7 @@ class CallFriend2Page extends TabsBasePage {
   template = require('../../templates/callFriend2Page.hbs');
 
   pageWillLoad() {
+    super.pageWillLoad();
     this.friend = friend;
     this.cross = cross;
     this.counter = 0;
