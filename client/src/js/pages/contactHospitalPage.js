@@ -26,6 +26,10 @@ class contactHospitalPage extends TabsBasePage {
   leftButtonEvent() {
     this.navigate('contactpolice');
   }
+
+  faceButtonEvent() {
+    this.navigate('callhospital');
+  }
 }
 
 module.exports = contactHospitalPage;

@@ -26,6 +26,10 @@ class contactFriend2Page extends TabsBasePage {
   leftButtonEvent() {
     this.navigate('contactfriend');
   }
+
+  faceButtonEvent() {
+    this.navigate('callfriend2');
+  }
 }
 
 module.exports = contactFriend2Page;

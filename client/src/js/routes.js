@@ -17,6 +17,9 @@ const ContactFriendPage = require('./pages/contactFriendPage');
 const ContactFriend2Page = require('./pages/contactFriend2Page');
 const ContactHospitalPage = require('./pages/contactHospitalPage');
 const CallPolicePage = require('./pages/callPolicePage');
+const CallHospitalPage = require('./pages/callHospitalPage');
+const CallFriendPage = require('./pages/callFriendPage');
+const CallFriend2Page = require('./pages/callFriend2Page');
 const GamesPage = require('./pages/gamesPage');
 const MedicinePage = require('./pages/medicinePage');
 const GamesListPage = require('./pages/gamesListPage');
@@ -48,6 +51,9 @@ module.exports = {
   'contactfriend': ContactFriendPage,
   'contactfriend2': ContactFriend2Page,
   'callpolice': CallPolicePage,
+  'callhospital': CallHospitalPage,
+  'callfriend': CallFriendPage,
+  'callfriend2': CallFriend2Page,
   'gamesList':GamesListPage,
   'calendar': CalendarPage,
   'walkingList': WalkingListPage,

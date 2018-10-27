@@ -1,12 +1,12 @@
 const TabsBasePage = require('./tabsBasePage');
-const police = require('../../images/police.png');
+const friend = require('../../images/woman.png');
 const cross = require('../../images/cross.png');
 
-class CallPolicePage extends TabsBasePage {
-  template = require('../../templates/callPolicePage.hbs');
+class CallFriendPage extends TabsBasePage {
+  template = require('../../templates/callFriendPage.hbs');
 
   pageWillLoad() {
-    this.police = police;
+    this.friend = friend;
     this.cross = cross;
     this.counter = 0;
     this.timer;
@@ -54,4 +54,4 @@ class CallPolicePage extends TabsBasePage {
 
 }
 
-module.exports = CallPolicePage;
+module.exports = CallFriendPage;
