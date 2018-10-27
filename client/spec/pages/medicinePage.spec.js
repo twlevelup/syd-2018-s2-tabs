@@ -1,6 +1,6 @@
 const MedicinePage = require('../../src/js/pages/medicinePage');
 
-describe('The Morning Page', () => {
+describe('The Medicine Page', () => {
   let watchFace;
   let page;
 
@@ -12,15 +12,10 @@ describe('The Morning Page', () => {
   });
 
   describe('#render', () => {
-    it('should render a tick image', () => {
-      expect(page.render()).toContain("<img src=\"../images/tick.png\"/>");
-    });
-
+  
     it('should contain a medicine reminder', () => {
       expect(page.render()).toContain('TAKE YOUR MEDICINE');
     });
-
-    
 
     it('should render medicine image', () => {
       expect(page.render()).toContain("<img class=\"med-image\" src=\"../images/happy-med.jpg\"/>");
@@ -30,8 +25,6 @@ describe('The Morning Page', () => {
     it('should render a cross image', () => {
       expect(page.render()).toContain("<img src=\"../images/cross.png\"/>");
     })
-
-
 
   }); 
 

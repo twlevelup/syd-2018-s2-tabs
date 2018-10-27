@@ -13,7 +13,6 @@ describe('The Success Medicine Taking Page', () => {
 
   describe('#render', () => {
    
-
     it('should contain a medicine reminder', () => {
       expect(page.render()).toContain('GOOD JOB!');
     });
