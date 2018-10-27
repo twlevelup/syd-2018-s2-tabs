@@ -6,12 +6,16 @@
 
 }
 
-#walkingImage img {
-    height: 140px;
-    margin: 10px;
-    padding-left:50px;
-    padding-right: 30px;
+#walkingImage {
+  text-align: center;
+  margin-right: 22px;
 
+
+  img {
+    height: 140px;
+    border-radius: 3px;
+    margin: 0 auto;
+  }
 }
 
 #centralizedWord {

@@ -18,6 +18,7 @@ class EmergencyAlertPage extends TabsBasePage {
     this.countdowngif = countdowngif;
     this.cross = cross;
   }
+
   template = require('../../templates/emergencyAlertPage.hbs');
 
   bottomButtonEvent() {
@@ -26,7 +27,6 @@ class EmergencyAlertPage extends TabsBasePage {
 
     this.navigate('/');
   }
-
 }
 
 module.exports = EmergencyAlertPage;
