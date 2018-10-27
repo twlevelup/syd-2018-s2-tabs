@@ -59,32 +59,6 @@ describe('HomePage', () => {
     });
   });
 
-  describe('#topButtonEvent', () => {
-    it('goes to emergencyAlertPage', () => {
-      const props = {
-        navigate: () => { },
-      };
-      const page = new HomePage(props);
-      page.pageWillLoad()
-      spyOn(page, 'navigate');
-      page.topButtonEvent()
-      page.topButtonEvent()
-
-      expect(page.navigate).toHaveBeenCalledWith('emergencyAlert');
-    });
-
-    it ('does not go to emergencyAlertPage', () => {
-      const props = {
-        navigate: () => { },
-      };
-      const page = new HomePage(props);
-      page.pageWillLoad();
-      spyOn(page, 'navigate');
-      page.topButtonEvent();
-      expect(page.navigate).toHaveBeenCalledTimes(0);
-    });
-  });
-
 
   describe('#bottomButtonEvent', () => {
     it('goes to app page', () => {
@@ -152,7 +126,7 @@ describe('HomePage', () => {
       expect(props.navigate).toBeCalledWith('takemed');
     });
 
-    
+
   });
 
   describe('#updateTimeEverySecond', () => {

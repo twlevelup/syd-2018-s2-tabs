@@ -3,6 +3,10 @@ const TabsBasePage = require('./tabsBasePage');
 class FourOhFourPage extends TabsBasePage {
   template = require('../../templates/404Page.hbs');
 
+  pageWillLoad() {
+    super.pageWillLoad();
+  }
+
   leftButtonEvent() {
     this.navigate('/');
   }

@@ -5,6 +5,7 @@ const cross = require('../../images/cross.png');
 class HappyPage extends TabsBasePage {
 
   pageWillLoad() {
+    super.pageWillLoad();
     this.happyface = happyface;
     this.cross = cross;
   }

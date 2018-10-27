@@ -5,6 +5,7 @@ class MedicinePage extends TabsBasePage {
   template = require('../../templates/medicinePage.hbs');
 
   pageWillLoad() {
+    super.pageWillLoad();
     this.cross = cross;
   }
 

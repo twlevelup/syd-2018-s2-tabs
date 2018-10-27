@@ -3,6 +3,7 @@ const cross = require('../../images/cross.png');
 
 class EmergencyMessageSentPage extends TabsBasePage {
   pageWillLoad() {
+    super.pageWillLoad();
     this.cross = cross;
   }
 

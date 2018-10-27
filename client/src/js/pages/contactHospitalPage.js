@@ -8,6 +8,7 @@ class contactHospitalPage extends TabsBasePage {
   template = require('../../templates/contactHospitalPage.hbs');
 
   pageWillLoad() {
+    super.pageWillLoad();
     this.hospital = hospital;
     this.cross = cross;
     this.left = left;

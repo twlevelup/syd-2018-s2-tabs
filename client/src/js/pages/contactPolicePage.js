@@ -8,6 +8,7 @@ class contactPolicePage extends TabsBasePage {
   template = require('../../templates/contactPolicePage.hbs');
 
   pageWillLoad() {
+    super.pageWillLoad();
     this.police = police;
     this.cross = cross;
     this.left = left;

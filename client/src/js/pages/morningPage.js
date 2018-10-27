@@ -8,6 +8,7 @@ class MorningPage extends TabsBasePage {
   template = require('../../templates/morningPage.hbs');
 
   pageWillLoad() {
+    super.pageWillLoad();
     this.sadface = sadface;
     this.happyface = happyface;
     this.neutralface = neutralface;

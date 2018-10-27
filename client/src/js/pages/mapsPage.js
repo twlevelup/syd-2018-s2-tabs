@@ -2,6 +2,10 @@ const TabsBasePage = require('./tabsBasePage');
 class MapsPage extends TabsBasePage {
   template = require('../../templates/mapsPage.hbs');
 
+  pageWillLoad() {
+    super.pageWillLoad();
+  }
+
   bottomButtonEvent() {
     this.navigate('/');
   }

@@ -27,9 +27,6 @@ class HomePage extends TabsBasePage {
     this.date = dateTime.date;
     this.time = dateTime.time;
     this.logo = logo;
-    this.counter = 0;
-    this.firstClick = null;
-    this.secondClick = null;
     this.appsIcon = appsIcon;
     this.contactIcon = contactIcon;
     this.dobuleClickIcon = dobuleClickIcon;
@@ -87,27 +84,6 @@ class HomePage extends TabsBasePage {
 
   }
 
-  topButtonEvent() {
-    this.counter += 1;
-    if (this.counter === 1) {
-     this.firstClick = Date.now();
-     //console.log(this.firstClick + ' this is a first click');
-    }
-    if(this.counter === 2) {
-      this.secondClick = Date.now();
-        //console.log(this.secondClick + ' this is a secondClick click');
-        //console.log(this.secondClick-this.firstClick+' this is math stuff');
-      if ( (this.secondClick-this.firstClick) < 2000) {
-        console.log('moveing')
-        this.navigate('emergencyAlert')
-      } else {
-        this.firstClick = this.secondClick;
-          //console.log(this.firstClick + ' this is a first reassign value');
-        this.secondClick = 0;
-        this.counter = 1;
-      }
-    }
-  }
 
   bottomButtonEvent() {
     this.navigate('games');

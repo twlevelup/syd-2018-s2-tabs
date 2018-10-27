@@ -8,6 +8,7 @@ class contactFriendPage extends TabsBasePage {
   template = require('../../templates/contactFriendPage.hbs');
 
   pageWillLoad() {
+    super.pageWillLoad();
     this.friend = friend;
     this.cross = cross;
     this.left = left;

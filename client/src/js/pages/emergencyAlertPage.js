@@ -4,6 +4,7 @@ const cross = require('../../images/cross.png');
 
 class EmergencyAlertPage extends TabsBasePage {
   pageWillLoad() {
+    super.pageWillLoad();
     console.log('pageWillLoad')
     this.timerEvent = setTimeout(()=>{this.navigate('emergencyMessageSentPage')}, 6000)
     console.log(this.timerEvent)

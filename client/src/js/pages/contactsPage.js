@@ -5,6 +5,7 @@ class ContactsPage extends TabsBasePage {
   template = require('../../templates/contactsPage.hbs');
 
   pageWillLoad() {
+    super.pageWillLoad();
     this.contacts = StorageHub.getData('contacts')
   }
 

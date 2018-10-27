@@ -5,6 +5,7 @@ const cross = require('../../images/cross.png');
 class NeutralPage extends TabsBasePage {
 
   pageWillLoad() {
+    super.pageWillLoad();
     this.neutralface = neutralface;
     this.cross = cross;
   }

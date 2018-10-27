@@ -5,6 +5,7 @@ const cross = require('../../images/cross.png');
 class SadPage extends TabsBasePage {
 
   pageWillLoad() {
+    super.pageWillLoad();
     this.sadface = sadface;
     this.cross = cross;
   }

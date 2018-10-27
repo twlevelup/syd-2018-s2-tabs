@@ -5,6 +5,7 @@ const cross = require('../../images/cross.png');
 class GamesPage extends TabsBasePage {
 
   pageWillLoad() {
+    super.pageWillLoad();
     this.gamesIcon = gamesIcon;
     this.cross = cross;
   }
