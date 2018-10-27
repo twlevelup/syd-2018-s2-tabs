@@ -55,7 +55,7 @@ module.exports = {
   'successmed': SuccessMedPage,
   'walkingActivity': WalkingActivityPage,
   'failmed': FailMedPage,
-  'takemed': MedicinePage
+  'takemed': MedicinePage,
   'doneWalking': DoneWalkingPage
 
 };
