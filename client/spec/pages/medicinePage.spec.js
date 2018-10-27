@@ -35,16 +35,29 @@ describe('The Morning Page', () => {
 
   }); 
 
-    describe('#faceButtonEvent', () => {
-      it('goes to successful medicine taking page', () => {
-        const props = {
-          navigate: () => { },
-        };
-        const page = new MedicinePage(props);
-        spyOn(page, 'navigate');
+  describe('#faceButtonEvent', () => {
+    it('goes to successful medicine taking page', () => {
+      const props = {
+        navigate: () => { },
+      };
+      const page = new MedicinePage(props);
+      spyOn(page, 'navigate');
 
-        page.faceButtonEvent();
-        expect(page.navigate).toHaveBeenCalledWith('successmed');
-      });
+      page.faceButtonEvent();
+      expect(page.navigate).toHaveBeenCalledWith('successmed');
+    });
+  });
+
+  describe('#bottomButtonEvent', () => {
+    it('goes to fail medicine taking page', () => {
+      const props = {
+        navigate: () => { },
+      };
+      const page = new MedicinePage(props);
+      spyOn(page, 'navigate');
+
+      page.bottomButtonEvent();
+      expect(page.navigate).toHaveBeenCalledWith('failmed');
+    });
   });
 });

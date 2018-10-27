@@ -10,7 +10,7 @@ class MedicinePage extends TabsBasePage {
   }
 
   bottomButtonEvent() {
-    this.navigate('/');
+    this.navigate('failmed');
   }
 
   faceButtonEvent() {
