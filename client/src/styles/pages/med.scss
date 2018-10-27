@@ -13,20 +13,35 @@
 }
 
 .med-text-fail {
-    padding-top: 35px;
+    padding-top: 55px;
     padding-bottom: 3px;
     text-align: center;
     padding-right: 22px;
+
 }
 
 .med-image {
     width: 36%;
-    padding-left: 65px;
+    margin: 0 auto;
+    text-align: center;
     padding-top: 0px;
+
+    img {
+      margin-left: -20px;
+      border-radius: 3px;
+
+    }
 }
 
 .fail-med-image {
    width: 46%;
-    padding-left: 53px;
-    padding-top: 19px;
+   margin: 0 auto;
+   text-align: center;
+   padding-top: 0px;
+
+   img {
+     margin-left: -20px;
+     border-radius: 3px;
+
+   }
 }

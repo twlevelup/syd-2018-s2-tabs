@@ -12,19 +12,19 @@ describe('The Fail Medicine Taking Page', () => {
   });
 
   describe('#render', () => {
-   
+
 
     it('should contain an alert message', () => {
       expect(page.render()).toContain('FAMILY ALERTED');
     });
 
     it('should render an alert image', () => {
-      expect(page.render()).toContain("<img class=\"fail-med-image\" src=\"../images/fail-med.png\"/>");
+      expect(page.render()).toContain("<img src=\"../images/fail-med.png\"/>");
     });
 
     it('should render a cross image', () => {
       expect(page.render()).toContain("<img src=\"../images/cross.png\"/>");
     });
 
-  }); 
+  });
 });

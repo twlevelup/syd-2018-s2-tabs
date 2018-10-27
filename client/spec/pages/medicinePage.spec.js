@@ -12,13 +12,13 @@ describe('The Medicine Page', () => {
   });
 
   describe('#render', () => {
-  
+
     it('should contain a medicine reminder', () => {
       expect(page.render()).toContain('TAKE YOUR MEDICINE');
     });
 
     it('should render medicine image', () => {
-      expect(page.render()).toContain("<img class=\"med-image\" src=\"../images/happy-med.jpg\"/>");
+      expect(page.render()).toContain("<img src=\"../images/happy-med.jpg\"/>");
 
     });
 
@@ -26,7 +26,7 @@ describe('The Medicine Page', () => {
       expect(page.render()).toContain("<img src=\"../images/cross.png\"/>");
     })
 
-  }); 
+  });
 
   describe('#faceButtonEvent', () => {
     it('goes to successful medicine taking page', () => {
