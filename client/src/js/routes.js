@@ -21,6 +21,7 @@ const MedicinePage = require('./pages/medicinePage');
 const GamesListPage = require('./pages/gamesListPage');
 const CalendarPage = require('./pages/calendarPage');
 const WalkingListPage = require('./pages/walkingListPage');
+const TodayPage = require('./pages/todayPage');
 
 module.exports = {
   '/': HomePage,
@@ -45,6 +46,7 @@ module.exports = {
   'takemed': MedicinePage,
   'gamesList':GamesListPage,
   'calendar': CalendarPage,
-  'walkingList': WalkingListPage
+  'walkingList': WalkingListPage,
+  'today':TodayPage
 
 };

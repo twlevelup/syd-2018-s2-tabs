@@ -9,7 +9,7 @@ class GamesPage extends BasePage {
     this.cross = cross;
   }
 
-  template = require('../../templates/calendarPage.hbs');
+  template = require('../../templates/calendarToday.hbs');
 
   bottomButtonEvent() {
     this.navigate('/');
@@ -27,9 +27,6 @@ class GamesPage extends BasePage {
     this.navigate('today');
   }
 
-  topButtonEvent() {
-    this.navigate('today');
-  }
 
 }
 
