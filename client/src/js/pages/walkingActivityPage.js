@@ -14,7 +14,6 @@ class WalkingActivityPage extends BasePage {
   bottomButtonEvent() {
     this.navigate('/');
   }
-
 }
 
 module.exports = WalkingActivityPage;
