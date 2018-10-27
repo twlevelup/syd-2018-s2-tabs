@@ -30,6 +30,11 @@ const SuccessMedPage = require('./pages/successMedPage');
 const FailMedPage = require('./pages/failMedPage');
 const WalkingActivityPage = require('./pages/walkingActivityPage');
 const DoneWalkingPage = require('./pages/doneWalkingPage');
+const YesterdayPage = require('./pages/yesterdayPage');
+const TomorrowPage = require('./pages/tomorrowPage');
+const TodayEvent = require('./pages/eventPage');
+const NoEvent = require('./pages/noEventPage');
+
 module.exports = {
   '/': HomePage,
   'team': TeamPage,
@@ -62,6 +67,9 @@ module.exports = {
   'walkingActivity': WalkingActivityPage,
   'failmed': FailMedPage,
   'takemed': MedicinePage,
-  'doneWalking': DoneWalkingPage
-
+  'doneWalking': DoneWalkingPage,
+  'yesterday':YesterdayPage,
+  'tomorrow':TomorrowPage,
+  'event':TodayEvent,
+  'noevent':NoEvent
 };
