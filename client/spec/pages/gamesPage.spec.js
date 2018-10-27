@@ -37,7 +37,7 @@ describe('The Games Page', () => {
       spyOn(page, 'navigate');
 
       page.faceButtonEvent();
-      expect(page.navigate).toHaveBeenCalledWith('gamesList');
+      expect(page.navigate).toHaveBeenCalledWith('walkingList');
     });
   });
 

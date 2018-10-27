@@ -16,7 +16,7 @@ class GamesPage extends TabsBasePage {
   }
 
   faceButtonEvent() {
-    this.navigate('gamesList');
+    this.navigate('walkingList');
   }
 
   leftButtonEvent() {
