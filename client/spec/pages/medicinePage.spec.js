@@ -35,56 +35,16 @@ describe('The Morning Page', () => {
 
   }); 
 
-  // describe('#bottomButtonEvent', () => {
-  //   it('goes to root page', () => {
-  //     const props = {
-  //       navigate: () => { },
-  //     };
-  //     const page = new MorningPage(props);
-  //     spyOn(page, 'navigate');
+    describe('#faceButtonEvent', () => {
+      it('goes to successful medicine taking page', () => {
+        const props = {
+          navigate: () => { },
+        };
+        const page = new MedicinePage(props);
+        spyOn(page, 'navigate');
 
-  //     page.bottomButtonEvent();
-  //     expect(page.navigate).toHaveBeenCalledWith('/');
-  //   });
-  // });
-
-  // describe('#leftButtonEvent', () => {
-  //   it('goes to happy page', () => {
-  //     const props = {
-  //       navigate: () => { },
-  //     };
-  //     const page = new MorningPage(props);
-  //     spyOn(page, 'navigate');
-
-  //     page.leftButtonEvent();
-  //     expect(page.navigate).toHaveBeenCalledWith('happy');
-  //   });
-  // });
-
-  // describe('#rightButtonEvent', () => {
-  //   it('goes to sad page', () => {
-  //     const props = {
-  //       navigate: () => { },
-  //     };
-  //     const page = new MorningPage(props);
-  //     spyOn(page, 'navigate');
-
-  //     page.rightButtonEvent();
-  //     expect(page.navigate).toHaveBeenCalledWith('sad');
-  //   });
-  // });
-
-  // describe('#topButtonEvent', () => {
-  //   it('goes to neutral page', () => {
-  //     const props = {
-  //       navigate: () => { },
-  //     };
-  //     const page = new MorningPage(props);
-  //     spyOn(page, 'navigate');
-
-  //     page.topButtonEvent();
-  //     expect(page.navigate).toHaveBeenCalledWith('neutral');
-  //   });
-  // });
-
+        page.faceButtonEvent();
+        expect(page.navigate).toHaveBeenCalledWith('successmed');
+      });
+  });
 });
