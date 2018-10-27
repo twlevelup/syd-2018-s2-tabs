@@ -16,6 +16,7 @@ const ContactPolicePage = require('./pages/contactPolicePage');
 const ContactFriendPage = require('./pages/contactFriendPage');
 const ContactFriend2Page = require('./pages/contactFriend2Page');
 const ContactHospitalPage = require('./pages/contactHospitalPage');
+const CallPolicePage = require('./pages/callPolicePage');
 const GamesPage = require('./pages/gamesPage');
 const MedicinePage = require('./pages/medicinePage');
 const GamesListPage = require('./pages/gamesListPage');
@@ -46,7 +47,7 @@ module.exports = {
   'contacthospital': ContactHospitalPage,
   'contactfriend': ContactFriendPage,
   'contactfriend2': ContactFriend2Page,
-  'takemed': MedicinePage,
+  'callpolice': CallPolicePage,
   'gamesList':GamesListPage,
   'calendar': CalendarPage,
   'walkingList': WalkingListPage,
@@ -54,4 +55,6 @@ module.exports = {
   'successmed': SuccessMedPage,
   'walkingActivity': WalkingActivityPage,
   'failmed': FailMedPage,
+  'takemed': MedicinePage
+
 };

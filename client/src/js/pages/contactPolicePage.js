@@ -26,6 +26,10 @@ class contactPolicePage extends TabsBasePage {
   leftButtonEvent() {
     this.navigate('contactfriend2');
   }
+
+  faceButtonEvent() {
+    this.navigate('callpolice');
+  }
 }
 
 module.exports = contactPolicePage;
