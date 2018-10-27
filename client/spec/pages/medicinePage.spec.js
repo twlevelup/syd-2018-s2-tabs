@@ -2,23 +2,39 @@ const MedicinePage = require('../../src/js/pages/medicinePage');
 
 describe('The Morning Page', () => {
   let watchFace;
+  let page;
+
   beforeEach(() => {
     document.body.innerHTML = `<div id='watch-face' style='height: 100px; width: 100px;'></div>`;
     watchFace = document.getElementById('watch-face');
+    page = new MedicinePage();
+    page.pageWillLoad();
   });
 
   describe('#render', () => {
-    it('should contain a morning greeting', () => {
-      const page = new MedicinePage();
+    it('should render a tick image', () => {
+      expect(page.render()).toContain("<img src=\"../images/tick.png\"/>");
+    });
+
+    it('should contain a medicine reminder', () => {
       expect(page.render()).toContain('TAKE YOUR MEDICINE');
     });
 
+    
+
     it('should render medicine image', () => {
-      const page = new MedicinePage();
-      expect(page.render()).toContain("<img src=\"../images/happy-med.jpg\">");
+      expect(page.render()).toContain("<img class=\"med-image\" src=\"../images/happy-med.jpg\"/>");
+
+    });
+
+    it('should render a cross image', () => {
+      expect(page.render()).toContain("<img src=\"../images/cross.png\"/>");
+
     })
 
-  });
+
+
+  }); 
 
   // describe('#bottomButtonEvent', () => {
   //   it('goes to root page', () => {

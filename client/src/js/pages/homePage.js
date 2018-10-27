@@ -12,7 +12,7 @@ class HomePage extends TabsBasePage {
   template = require('../../templates/homePage.hbs');
   morningTime = '07:00:00';
   eveningTime = '17:00:00';
-  medicineTime = '12:00:00';
+  medicineTime = '10:15:00';
 
   pageWillLoad() {
     super.pageWillLoad()
