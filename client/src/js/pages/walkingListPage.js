@@ -1,11 +1,11 @@
 const BasePage = require('watch-framework').BasePage;
-const gamesIcon = require('../../images/gamepad.png');
+const walkingIcon = require('../../images/walkingStatic.png');
 const cross = require('../../images/cross.png');
 
 class WalkingListPage extends BasePage {
 
   pageWillLoad() {
-    // this.gamesIcon = gamesIcon;
+    this.walkingIcon = walkingIcon;
     this.cross = cross;
   }
 
@@ -13,6 +13,10 @@ class WalkingListPage extends BasePage {
 
   bottomButtonEvent() {
     this.navigate('/');
+  }
+
+  faceButtonEvent(){
+    this.navigate('walkingActivity');
   }
 
 }

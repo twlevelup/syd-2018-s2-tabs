@@ -26,19 +26,20 @@ describe('The Walking List Page', () => {
       expect(page.navigate).toHaveBeenCalledWith('/');
     });
   });
-  //
-  //
-  // describe('#faceButtonEvent', () => {
-  //   it('goes to gamesListPage', () => {
-  //     const props = {
-  //       navigate: () => { },
-  //     };
-  //     const page = new GamesPage(props);
-  //     spyOn(page, 'navigate');
-  //
-  //     page.faceButtonEvent();
-  //     expect(page.navigate).toHaveBeenCalledWith('gamesList');
-  //   });
-  // });
+
+
+
+  describe('#faceButtonEvent', () => {
+    it('goes to walkingActivityPage', () => {
+      const props = {
+        navigate: () => { },
+      };
+      const page = new WalkingListPage(props);
+      spyOn(page, 'navigate');
+
+      page.faceButtonEvent();
+      expect(page.navigate).toHaveBeenCalledWith('walkingActivity');
+    });
+  });
 
 });
