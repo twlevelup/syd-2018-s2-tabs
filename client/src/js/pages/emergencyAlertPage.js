@@ -3,6 +3,13 @@ const countdowngif = require('../../images/countdown.gif');
 const cross = require('../../images/cross.png');
 
 class EmergencyAlertPage extends TabsBasePage {
+  pageDidLoad()  {
+    //https://stackoverflow.com/a/10730240
+    const countdownEl = document.getElementById('countDownImg')
+    const existing = countdownEl.getAttribute('src');
+    countdownEl.setAttribute('src', existing.replace(/\?.*$/,"")+"?x="+Math.random());
+  }
+
   pageWillLoad() {
     super.pageWillLoad();
     console.log('pageWillLoad')
