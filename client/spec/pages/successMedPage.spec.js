@@ -18,5 +18,13 @@ describe('The Success Medicine Taking Page', () => {
       expect(page.render()).toContain('GOOD JOB!');
     });
 
+    it('should render a successful med taking image', () => {
+      expect(page.render()).toContain("<img class=\"med-image\" src=\"../images/success-med.png\"/>");
+    });
+
+    it('should render a cross image', () => {
+      expect(page.render()).toContain("<img src=\"../images/cross.png\"/>");
+    });
+
   }); 
 });
