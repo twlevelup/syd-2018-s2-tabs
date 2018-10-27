@@ -1,6 +1,6 @@
-const GamesPage = require('../../src/js/pages/gamesPage');
+const CalendarPage = require('../../src/js/pages/calendarPage');
 
-describe('The Games Page', () => {
+describe('The Calendar Page', () => {
   let watchFace;
   beforeEach(() => {
     document.body.innerHTML = `<div id='watch-face' style='height: 100px; width: 100px;'></div>`;
@@ -8,9 +8,9 @@ describe('The Games Page', () => {
   });
 
   describe('#render', () => {
-    it('should contain a message that says games', () => {
-      const page = new GamesPage();
-      expect(page.render()).toContain('Games');
+    it('should contain a message that says Calendar', () => {
+      const page = new CalendarPage();
+      expect(page.render()).toContain('Calendar');
     });
   });
 
@@ -19,7 +19,7 @@ describe('The Games Page', () => {
       const props = {
         navigate: () => { },
       };
-      const page = new GamesPage(props);
+      const page = new CalendarPage(props);
       spyOn(page, 'navigate');
 
       page.bottomButtonEvent();
@@ -29,15 +29,15 @@ describe('The Games Page', () => {
 
 
   describe('#faceButtonEvent', () => {
-    it('goes to gamesListPage', () => {
+    it('goes to todayPage', () => {
       const props = {
         navigate: () => { },
       };
-      const page = new GamesPage(props);
+      const page = new CalendarPage(props);
       spyOn(page, 'navigate');
 
       page.faceButtonEvent();
-      expect(page.navigate).toHaveBeenCalledWith('walkingList');
+      expect(page.navigate).toHaveBeenCalledWith('today');
     });
   });
 
@@ -46,11 +46,11 @@ describe('The Games Page', () => {
       const props = {
         navigate: () => { },
       };
-      const page = new GamesPage(props);
+      const page = new CalendarPage(props);
       spyOn(page, 'navigate');
 
       page.leftButtonEvent();
-      expect(page.navigate).toHaveBeenCalledWith('calendar');
+      expect(page.navigate).toHaveBeenCalledWith('games');
     });
   });
 
@@ -59,11 +59,11 @@ describe('The Games Page', () => {
       const props = {
         navigate: () => { },
       };
-      const page = new GamesPage(props);
+      const page = new CalendarPage(props);
       spyOn(page, 'navigate');
 
       page.rightButtonEvent();
-      expect(page.navigate).toHaveBeenCalledWith('calendar');
+      expect(page.navigate).toHaveBeenCalledWith('games');
     });
   });
 
