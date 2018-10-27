@@ -29,7 +29,6 @@ describe('The Morning Page', () => {
 
     it('should render a cross image', () => {
       expect(page.render()).toContain("<img src=\"../images/cross.png\"/>");
-
     })
 
 
